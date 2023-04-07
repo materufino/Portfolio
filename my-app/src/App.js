@@ -7,7 +7,6 @@ import Home from './Components/Home';
 function App() {
 
 
-
   return (
     <BrowserRouter>
       <div className="App">

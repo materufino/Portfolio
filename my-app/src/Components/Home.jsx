@@ -1,8 +1,17 @@
+
+import styled from "styled-components"
+import AboutMe from "./AboutMe"
+import Hobbies from "./Hobbies"
+import Navbar from "./Navbar"
+import Portada from "./Portada"
+import Proyects from "./Proyects"
+
+
+
 const Home = () => {
     return (<>
 
-
-        <NavBar />
+        <Navbar />
 
         <Portada />
 
