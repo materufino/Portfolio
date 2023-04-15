@@ -1,5 +1,3 @@
-
-import styled from "styled-components"
 import AboutMe from "./AboutMe"
 import Hobbies from "./Hobbies"
 import Navbar from "./Navbar"

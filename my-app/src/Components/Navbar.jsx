@@ -3,13 +3,14 @@ import logo from "../Assets/M.png"
 
 
 const Contenedor = styled.nav`
+    margin-top:60px;
     width:80%;
     display:flex;
     justify-content: space-between;
-    margin: 20px auto;
+    margin: 30px auto;
     letter-spacing:3px;
-    border-box:1px solid gray;
-
+    height:20vh;
+    align-items: flex-start;
 `
 
 const Secciones = styled.ul`
@@ -119,24 +120,24 @@ export const StyledLink = styled.a`
 
 const Navbar = () => {
 
-    return (<>
-        <Contenedor>
-            <Secciones>
-                <img src={logo} alt="" />
-            </Secciones>
-            <Secciones>
-                <StyledLi><a href="#AboutMe"> About </a></StyledLi>
-                <StyledLi><a href="#Proyects"> Proyects </a></StyledLi>
-                <StyledLi><a href="#Hobbies"> Hobbies </a></StyledLi>
-                <StyledLi>
-                    <div>
-                        <StyledLink href="https://www.example.com">Enlace</StyledLink>
-                    </div>
-                </StyledLi>
-            </Secciones>
-        </Contenedor>
+  return (<>
+    <Contenedor>
+      <Secciones>
+        <img src={logo} alt="" />
+      </Secciones>
+      <Secciones>
+        <StyledLi><a href="#AboutMe"> About </a></StyledLi>
+        <StyledLi><a href="#Proyects"> Proyects </a></StyledLi>
+        <StyledLi><a href="#Hobbies"> Hobbies </a></StyledLi>
+        <StyledLi>
+          <div>
+            <StyledLink href="https://www.example.com">CV</StyledLink>
+          </div>
+        </StyledLi>
+      </Secciones>
+    </Contenedor>
 
-    </>)
+  </>)
 }
 
 export default Navbar

@@ -10,6 +10,7 @@ const Container = styled.div`
   width:80%;
   height:80vh;
   justify-content:space-around;
+  margin-top: -100px;
 `;
 
 
@@ -36,14 +37,15 @@ const StyledP = styled.div`
     content: "";
     display: block;
     margin: 30px auto;
-    height: 2px;
+    height: 5px;
     width: 10px;
     transition: all 0.8s;
+    border-radius: 5px;
   }
 
   &:hover:after {
     width: 60%;
-    background: #333;
+    background: #4e6464;
   }
 `;
 
@@ -55,7 +57,7 @@ const Imagen = styled.img`
 
   &:hover ~ div ${StyledP}:after {
     width: 60%;
-    background: #333;
+    background-color: #4e6464;
   }
 
   &:hover{
@@ -72,8 +74,8 @@ const Image = () => {
 
       <Imagen src={mateo} />
       <div>
-        <Title>Mateo Rufino</Title>
-        <StyledP>Web developer - Full Stack</StyledP>
+        <Title>{("Mateo Rufino").toUpperCase()}</Title>
+        <StyledP>{("Web developer - Full Stack")}</StyledP>
       </div>
 
     </Container>
