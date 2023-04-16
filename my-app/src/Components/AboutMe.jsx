@@ -13,9 +13,6 @@ const Contenedor = styled.div`
 `
 
 
-
-
-
 const StyledH3 = styled.h3`
     font-size:40px;
     font-family: 'Source Code Pro', monospace;
@@ -52,7 +49,7 @@ const AboutMe = () => {
     return (<>
         <Contenedor>
             <StyledH3>About</StyledH3>
-            <Divisor></Divisor>
+            <Divisor />
             <Parrafo>Hola! Bienvenido a mi portfolio. Mi nombre es Mateo y soy Desarrollador web Full Stack. Desde muy joven me ha gustado mucho la programación, lo que me ha llevado donde estoy hoy.
                 En la web podrás encontrar mi Curriculum Vitae, acceder a mis proyectos y saber un poco más sobre mi. Te invito a que explores mi trabajo y veas cómo puedo ayudarte en tu próximo proyecto.<br />
                 ¡Gracias por visitar mi sitio y espero poder trabajar juntos pronto!
