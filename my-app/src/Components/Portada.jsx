@@ -8,9 +8,8 @@ const Container = styled.div`
   align-items: center;
   margin: 0 auto ;
   width:80%;
-  height:80vh;
+  height:90vh;
   justify-content:space-around;
-  margin-top: -100px;
 `;
 
 
@@ -22,7 +21,6 @@ const Title = styled.h1`
 
 
 const StyledP = styled.div`
-  
   width:100%;
   margin-top:10px;
   margin-bottom:10px;

@@ -9,9 +9,11 @@ import Proyects from "./Proyects"
 const Home = () => {
     return (<>
 
-        <Navbar />
+
 
         <Portada />
+
+        <Navbar />
 
         <AboutMe />
 

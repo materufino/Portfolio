@@ -1,25 +1,21 @@
 import styled, { keyframes } from 'styled-components';
-import logo from "../Assets/M.png"
+
 
 
 const Contenedor = styled.nav`
     margin-top:60px;
     width:80%;
     display:flex;
-    justify-content: space-between;
-    margin: 30px auto;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     letter-spacing:3px;
-    height:20vh;
-    align-items: flex-start;
+    height:10vh;
 `
 
 const Secciones = styled.ul`
-
     display: flex;
     flex-direction:row;
-    justify-content:right;
-    align-items:center;
-    
     img{
         width:60px;
     }
@@ -27,7 +23,7 @@ const Secciones = styled.ul`
 `
 
 const StyledLi = styled.li`
-    border-left: 1px solid grey;
+    
     a{
         font-size: 25px;
         padding: 15px;
@@ -122,9 +118,6 @@ const Navbar = () => {
 
   return (<>
     <Contenedor>
-      <Secciones>
-        <img src={logo} alt="" />
-      </Secciones>
       <Secciones>
         <StyledLi><a href="#AboutMe"> About </a></StyledLi>
         <StyledLi><a href="#Proyects"> Proyects </a></StyledLi>

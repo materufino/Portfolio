@@ -6,7 +6,7 @@ const Contenedor = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    width: 80%;
+    width: 100%;
     margin: 100px auto;
     background-image: url(${fondo});
     background-size: cover;
@@ -27,7 +27,7 @@ const Parrafo = styled.p`
     font-size:20px;
     text-align: center;
     line-height: 30px;
-    width: 95%;
+    width: 80%;
 
 `
 const Divisor = styled.div`
