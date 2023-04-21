@@ -7,9 +7,8 @@ const Contenedor = styled.div`
     justify-content:center;
     align-items:center;
     width: 100%;
+    height: 90vh;
     margin: 100px auto;
-    background-image: url(${fondo});
-    background-size: cover;
 `
 
 
@@ -33,7 +32,7 @@ const Parrafo = styled.p`
 const Divisor = styled.div`
     width:45px;
     height: 5px;
-    background-color:#4e6464;
+    background-color: #724242;
     border-radius: 5px;
     margin-top:25px;
 `
@@ -41,9 +40,6 @@ const Divisor = styled.div`
 
 
 const AboutMe = () => {
-
-
-
 
 
     return (<>

@@ -5,7 +5,7 @@ const Proyectos = [{
     titulo: "Ánforas de Atenea",
     url: 'www.anforasdeatenea.com',
     imagen: anforas,
-    descripcion: "En esta ocasion, tuve la gran oportunidad de dar el primer paso dentro del mundo digital con la empresa Ánforas de Atenea, con su primera versión web donde cuentan su historia, exhiben sus productos y enseñan su galeria de fotos."
+    descripcion: "Web para Ánforas de Atenea, con su primera versión web donde cuentan su historia, exhiben sus productos y enseñan su galeria de fotos."
 
 }, {
     titulo: "Los guardianes de la chispa",

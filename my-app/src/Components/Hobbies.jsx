@@ -14,6 +14,7 @@ const Contenedor = styled.div`
     justify-content:center;
     align-items:center;
     width: 80%;
+    height: 90vh;
     margin: 100px auto;
 `
 
@@ -85,7 +86,7 @@ const Hobbies = () => {
                 </TarjetaImg>
                 <TarjetaImg>
                     <h4>Entrenador de Calistenia</h4>
-                    <p>Luego de 3 años de duro entrenamiento, decidí llevar mis conocimientos sobre la disciplina más allá.  </p>
+                    <p>Luego de 3 años de duro entrenamiento, decidí llevar mis conocimientos sobre la disciplina a otro nivel.  </p>
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "20px", marginBottom: "20px" }}><img src={front} alt="" /></div>
                 </TarjetaImg>
             </ContenedorImagenes>

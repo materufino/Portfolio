@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import GaleriaDeProyectos from "../Components/Pequeños/GaleriaDeProyectos"
-
+import GaleriaDeProyectos from "./Pequeños/GaleriaDeProyectos"
+import mancha from "../Assets/mancha.png"
 
 
 const Container = styled.div`
@@ -35,29 +35,35 @@ const Parrafo = styled.p`
     line-height: 30px;
 
 `
+const Mancha = styled.div`
+    background-image: url(${mancha});
+    width: 500px;
+    height: 100px;
+    margin-left: -200px;
+    position: absolute;
+    transform: rotate(90deg);
+`
 
-
-const Proyects = () => {
+const Projects = () => {
 
 
 
 
     return (<>
 
+        <Mancha />
 
 
         <Container>
 
 
 
-            <StyledH3>Proyects</StyledH3>
+            <StyledH3>Projects</StyledH3>
 
             <Divisor></Divisor>
             <Parrafo>Mis proyectos realizados hasta el momento, si quieres ver más en profundidad puedes hacer clic en la imagen y serás dirigido al sitio web </Parrafo>
             <Parrafo style={{ marginTop: "-10px", color: "#9e9e9e", cursor: "pointer" }}>Ver todos</Parrafo>
             <GaleriaDeProyectos />
-
-
 
         </Container>
 
@@ -65,4 +71,4 @@ const Proyects = () => {
     </>)
 }
 
-export default Proyects
+export default Projects

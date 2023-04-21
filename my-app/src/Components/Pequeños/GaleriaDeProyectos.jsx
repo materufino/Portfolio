@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import Proyectos from '../Contenido/Proyectos'
 import styled from 'styled-components';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const Contenedor = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 `
 
 const StyledH4 = styled.h4`
@@ -36,37 +38,32 @@ const Parrafo = styled.p`
 
 const ButtonContainer = styled.div`
   display: flex;
+  width: 85%;
+  margin:0 auto;
   justify-content: space-between;
-  align-items: center;
-  width: 100px;
-  bottom: 20px;
-  left: calc(50% - 50px);
+  position: absolute;
 `;
 
 const SliderButton = styled.button`
-  
-  border-radius: 5%;
   border: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
   display: flex;
-  justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  margin:20px;
-  height: 35px;
-  width: 45px;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-  }
-
-  &:focus {
-    outline: none;
+  transition: all 0.8s ease-in-out;
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  background-color: rgba(0,0,0,0);
+  :hover{
+    color: #ffffff;
+    transition: 1s;
+    transform: translateX(15px);
   }
 
 `;
+
+
 
 const GaleriaDeProyectos = () => {
 
@@ -88,13 +85,15 @@ const GaleriaDeProyectos = () => {
             <Contenedor style={{ minHeight: "600px" }}>
                 <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
                 <Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" />
+                <ButtonContainer>
+                    <SliderButton onClick={handlePrevious}><FontAwesomeIcon icon={faArrowLeft} /></SliderButton>
+                    <SliderButton onClick={handleNext}><FontAwesomeIcon icon={faArrowRight} /></SliderButton>
+                </ButtonContainer>
                 <Parrafo>{Proyectos[currentProyect].descripcion} </Parrafo>
+
             </Contenedor>
 
-            <ButtonContainer>
-                <SliderButton onClick={handlePrevious}>Anterior</SliderButton>
-                <SliderButton onClick={handleNext}>Siguiente</SliderButton>
-            </ButtonContainer>
+
 
         </Contenedor>
 

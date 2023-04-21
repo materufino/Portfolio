@@ -2,7 +2,7 @@ import AboutMe from "./AboutMe"
 import Hobbies from "./Hobbies"
 import Navbar from "./Navbar"
 import Portada from "./Portada"
-import Proyects from "./Proyects"
+import Projects from "./Projects"
 
 
 
@@ -17,7 +17,7 @@ const Home = () => {
 
         <AboutMe />
 
-        <Proyects />
+        <Projects />
 
         <Hobbies />
 
