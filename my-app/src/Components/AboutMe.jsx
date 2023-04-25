@@ -32,11 +32,10 @@ const Parrafo = styled.p`
 const Divisor = styled.div`
     width:45px;
     height: 5px;
-    background-color: #724242;
     border-radius: 5px;
     margin-top:25px;
+    background-color: #724242;
 `
-
 
 
 const AboutMe = () => {

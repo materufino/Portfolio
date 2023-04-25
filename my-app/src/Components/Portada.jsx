@@ -83,7 +83,6 @@ const Button = styled.a`
   display: block;
   font-family: 'Montserrat', sans-serif;
   border: 0;
-  background: #724242;
   text-transform: uppercase;
   letter-spacing: .32em;
   cursor: pointer;
@@ -94,8 +93,12 @@ const Button = styled.a`
   transition: box-shadow 1s ease-in-out;
   color: rgba(189,189,189,1);
   position: relative;
+  background: rgb(114,66,66);
+  background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
+  box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
   :hover{
     color: black;
+    
   }
   :active{
     transition: background-color 0.1s ease;
@@ -112,7 +115,7 @@ const Mancha = styled.div`
     margin-left: -200px;
     position: absolute;
     rotate: calc(270deg);
-    right: -150px;
+    right: -100px;
     top: 0;
     z-index: -1-0;
 `

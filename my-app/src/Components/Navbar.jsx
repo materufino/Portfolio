@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import AboutMe from "./AboutMe";
+
 
 
 const StyledNav = styled.nav`
@@ -9,7 +9,8 @@ const StyledNav = styled.nav`
   top: ${({ isFixed }) => (isFixed ? "0" : "auto")};
   width: 100%;
   height: 10vh;
-  background: #724242;
+  background: rgb(114,66,66);
+  background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
   border-top-right-radius:5px;
   border-top-left-radius:5px;
@@ -111,7 +112,7 @@ const Navbar2 = () => {
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#Proyects">Proyects</StyledLink>
+            <StyledLink href="#Projects">Projects</StyledLink>
           </StyledListItem>
 
           <StyledListItem>

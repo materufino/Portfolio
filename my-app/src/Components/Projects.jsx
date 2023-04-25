@@ -15,9 +15,9 @@ const Container = styled.div`
 const Divisor = styled.div`
     width:45px;
     height: 5px;
-    background-color:#4e6464;
     border-radius: 5px;
     margin-top:25px;
+    background-color: #724242;
 `
 
 const StyledH3 = styled.h3`
@@ -44,6 +44,22 @@ const Mancha = styled.div`
     transform: rotate(90deg);
 `
 
+const Parrafo2 = styled.p`
+    margin-top:50px;
+    margin-bottom:50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 30px;
+    color: #9e9e9e;
+    cursor: pointer;
+    :hover{
+        color: #cfcfcf;
+    }
+
+`
+
 const Projects = () => {
 
 
@@ -59,10 +75,9 @@ const Projects = () => {
 
 
             <StyledH3>Projects</StyledH3>
-
             <Divisor></Divisor>
             <Parrafo>Mis proyectos realizados hasta el momento, si quieres ver más en profundidad puedes hacer clic en la imagen y serás dirigido al sitio web </Parrafo>
-            <Parrafo style={{ marginTop: "-10px", color: "#9e9e9e", cursor: "pointer" }}>Ver todos</Parrafo>
+            <Parrafo2>Ver todos</Parrafo2>
             <GaleriaDeProyectos />
 
         </Container>

@@ -4,13 +4,6 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-const Contenedor = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-`
 
 const StyledH4 = styled.h4`
     margin-bottom: 35px;
@@ -21,9 +14,10 @@ const StyledH4 = styled.h4`
 `
 
 const Imagen = styled.img`
-    width: 90%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 480px;
+    
 `
 
 const Parrafo = styled.p`
@@ -34,35 +28,59 @@ const Parrafo = styled.p`
     margin-top: 30px;
     margin-bottom: 10px;
     width: 90%;
+    min-height: 100px;
 `
 
-const ButtonContainer = styled.div`
-  display: flex;
-  width: 85%;
-  margin:0 auto;
-  justify-content: space-between;
-  position: absolute;
-`;
+const Icono = styled(FontAwesomeIcon)`
+   transition: transform 0.5s ease;
 
-const SliderButton = styled.button`
+  
+`;
+const BotonSliderAtras = styled.button`
+  width: 20%;
+  color: rgba(189,189,189,1);
+  background: rgb(114,66,66);
+  background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
+  box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
+  padding: 0.5rem;
   border: none;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.8s ease-in-out;
-  height: 50px;
-  width: 50px;
-  font-size: 30px;
-  background-color: rgba(0,0,0,0);
-  :hover{
-    color: #ffffff;
-    transition: 1s;
-    transform: translateX(15px);
-  }
+  border-right: 1px solid grey;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  
+  &:hover  {
+    ${Icono}{
+        transform: translateX(-30px); 
+        
+    }}
+  
+`
 
-`;
-
+const BotonSliderAdelante = styled.button`
+  color: rgba(189,189,189,1);
+  font-size: 1.2rem;
+  border-radius: 5px;
+  width: 20%;
+  background: rgb(114,66,66);
+  background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
+  box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
+  padding: 0.5rem;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  &:hover  {
+    ${Icono}{
+        transform: translateX(30px);
+    }}
+`
+const ContenedorBotones = styled.div`
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+`
 
 
 const GaleriaDeProyectos = () => {
@@ -77,25 +95,23 @@ const GaleriaDeProyectos = () => {
         const previousIndex = currentProyect === 0 ? Proyectos.length - 1 : currentProyect - 1;
         setCurrentProyect(previousIndex);
     };
-    console.log(Proyectos[0])
+
 
 
     return (<>
-        <Contenedor>
-            <Contenedor style={{ minHeight: "600px" }}>
-                <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
-                <Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" />
-                <ButtonContainer>
-                    <SliderButton onClick={handlePrevious}><FontAwesomeIcon icon={faArrowLeft} /></SliderButton>
-                    <SliderButton onClick={handleNext}><FontAwesomeIcon icon={faArrowRight} /></SliderButton>
-                </ButtonContainer>
-                <Parrafo>{Proyectos[currentProyect].descripcion} </Parrafo>
-
-            </Contenedor>
 
 
+        <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
+        <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
 
-        </Contenedor>
+        <ContenedorBotones>
+
+            <BotonSliderAtras onClick={handlePrevious} > <Icono icon={faArrowLeft} />  </BotonSliderAtras>
+            <BotonSliderAdelante onClick={handleNext} > <Icono icon={faArrowRight} /> </BotonSliderAdelante>
+
+        </ContenedorBotones>
+
+        <Parrafo> {Proyectos[currentProyect].descripcion} </Parrafo>
 
 
     </>);
