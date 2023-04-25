@@ -16,6 +16,8 @@ const Contenedor = styled.div`
     width: 80%;
     height: 90vh;
     margin: 100px auto;
+
+    
 `
 
 const Divisor = styled.div`
@@ -39,15 +41,31 @@ const Parrafo = styled.p`
 const ContenedorImagenes = styled.div`
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
     justify-content: space-around;
+     @media (min-width:20.00em) {        
+    background-color:red ;
+  }
+  @media (min-width:37.500em) {
+    background-color:yellow ;
+    flex-direction: row;
+  }
+  @media(min-width:43rem) {
+    background-color:green ;
+    flex-direction: row;
+              
+  }
+  @media(min-width:61.93em) {
+  background-color:blue ;
+  }  
     
     `
 
 const TarjetaImg = styled.div`
     box-shadow: 0px 0px 12px 2px rgba(189,189,189,0.8);
-    width: 45%;
+    width: 100%;
     padding: 10px;
     align-items: center;
     justify-content: center;
@@ -72,6 +90,20 @@ const TarjetaImg = styled.div`
         height: 200px;
         align-items: center;
     }
+     @media (min-width:20.00em) {        
+    background-color:red ;
+  }
+  @media (min-width:37.500em) {
+    background-color:yellow ;
+  }
+  @media(min-width:43rem) {
+    background-color:green ;
+    flex-direction: row;
+              
+  }
+  @media(min-width:61.93em) {
+  background-color:blue ;
+  }  
 `
 
 const Parrafo2 = styled.p`

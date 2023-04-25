@@ -42,6 +42,7 @@ const Mancha = styled.div`
     margin-left: -200px;
     position: absolute;
     transform: rotate(90deg);
+    z-index: -1;
 `
 
 const Parrafo2 = styled.p`

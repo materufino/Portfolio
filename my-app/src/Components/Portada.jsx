@@ -6,13 +6,28 @@ import mancha2 from "../Assets/mancha2.png"
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   margin: 0 auto ;
   width: 70%;
   height:90vh;
-  justify-content:space-around;
-
+  justify-content: center;
+  align-items: center;
+   @media (min-width:20.00em) {        
+    background-color:red ;
+  }
+  @media (min-width:37.500em) {
+    background-color:yellow ;
+  }
+  @media(min-width:43rem) {
+    background-color:green ;
+    flex-direction: row;
+    justify-content:space-around;
+              
+  }
+  @media(min-width:61.93em) {
+  background-color:blue ;
+  }  
 `;
 
 
@@ -112,12 +127,23 @@ const Mancha = styled.div`
     background-image: url(${mancha2});
     width: 500px;
     height: 300px;
-    margin-left: -200px;
+    margin-left: -2800px;
     position: absolute;
     rotate: calc(270deg);
     right: -100px;
     top: 0;
-    z-index: -1-0;
+    z-index: -1;
+    @media (min-width:20.00em) {        
+  
+  }
+  @media (min-width:37.500em) {
+  }
+  @media(min-width:48rem) {
+              
+  }
+  @media(min-width:61.93em) {
+              
+  } 
 `
 
 

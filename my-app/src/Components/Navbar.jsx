@@ -4,16 +4,36 @@ import styled from "styled-components";
 
 
 const StyledNav = styled.nav`
+margin-top: 10px;
   z-index: 100;
   position: ${({ isFixed }) => (isFixed ? "fixed" : "absolute")};
   top: ${({ isFixed }) => (isFixed ? "0" : "auto")};
   width: 100%;
-  height: 10vh;
+  display: flex;
+  flex-wrap: nowrap;
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
   border-top-right-radius:5px;
   border-top-left-radius:5px;
+  visibility: ${({ isFixed }) => (isFixed ? "hidden" : "visible")};
+  font-size: 1rem;
+  justify-content: space-around;
+  @media (min-width:20.00em) {        
+    
+  }
+  @media (min-width:37.500em) {
+    margin-top: 0px;
+    height: 10vh;
+    visibility: visible;
+  }
+  @media(min-width:43rem) {
+    
+         
+  }
+  @media(min-width:61.93em) {
+  
+  }  
 `;
 
 const StyledList = styled.ul`
@@ -28,7 +48,7 @@ const StyledList = styled.ul`
 `;
 
 const StyledListItem = styled.li`
- 
+  
   a {
     letter-spacing: 7px;
     color: rgba(189,189,189,1);

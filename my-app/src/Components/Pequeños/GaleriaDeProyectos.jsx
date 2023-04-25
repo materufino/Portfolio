@@ -10,6 +10,7 @@ const StyledH4 = styled.h4`
     font-size:20px;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 5px;
+    text-align: center;
     
 `
 
@@ -17,6 +18,17 @@ const Imagen = styled.img`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     height: 480px;
+    @media (min-width:20.00em) {        
+        width:200px ;
+  }
+  @media (min-width:37.500em) {
+  }
+  @media(min-width:48rem) {
+              
+  }
+  @media(min-width:61.93em) {
+              
+  } 
     
 `
 
@@ -33,7 +45,6 @@ const Parrafo = styled.p`
 
 const Icono = styled(FontAwesomeIcon)`
    transition: transform 0.5s ease;
-
   
 `;
 const BotonSliderAtras = styled.button`
@@ -102,8 +113,8 @@ const GaleriaDeProyectos = () => {
 
 
         <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
-        <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
-
+        {/*  <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
+ */}
         <ContenedorBotones>
 
             <BotonSliderAtras onClick={handlePrevious} > <Icono icon={faArrowLeft} />  </BotonSliderAtras>
