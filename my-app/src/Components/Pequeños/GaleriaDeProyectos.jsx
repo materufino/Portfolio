@@ -17,13 +17,17 @@ const StyledH4 = styled.h4`
 const Imagen = styled.img`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    height: 480px;
+    
     @media (min-width:20.00em) {        
-        width:200px ;
+        width:320px ;
   }
   @media (min-width:37.500em) {
+    
+    width: 590px;
   }
   @media(min-width:48rem) {
+    width: auto;
+    height: 420px;
               
   }
   @media(min-width:61.93em) {
@@ -63,7 +67,7 @@ const BotonSliderAtras = styled.button`
   
   &:hover  {
     ${Icono}{
-        transform: translateX(-30px); 
+        transform: translateX(-15px); 
         
     }}
   
@@ -81,10 +85,21 @@ const BotonSliderAdelante = styled.button`
   border: none;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  &:hover  {
+  
+    @media (min-width:20.00em) {        
+        &:hover  {
     ${Icono}{
-        transform: translateX(30px);
+        transform: translateX(15px);
     }}
+  }
+    @media (min-width:37.500em) {
+  }
+    @media(min-width:48rem) {
+
+  }
+    @media(min-width:61.93em) {
+
+  }
 `
 const ContenedorBotones = styled.div`
     margin-top: 15px;
@@ -92,7 +107,23 @@ const ContenedorBotones = styled.div`
     justify-content: space-around;
     width: 100%;
 `
-
+const Contenedor = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+     @media (min-width:20.00em) {        
+        min-height: 600px;
+  }
+    @media (min-width:37.500em) {
+  }
+    @media(min-width:48rem) {
+              
+  }
+    @media(min-width:61.93em) {
+              
+  } 
+`
 
 const GaleriaDeProyectos = () => {
 
@@ -109,12 +140,12 @@ const GaleriaDeProyectos = () => {
 
 
 
-    return (<>
+    return (<Contenedor>
 
 
         <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
-        {/*  <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
- */}
+        <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
+
         <ContenedorBotones>
 
             <BotonSliderAtras onClick={handlePrevious} > <Icono icon={faArrowLeft} />  </BotonSliderAtras>
@@ -125,7 +156,7 @@ const GaleriaDeProyectos = () => {
         <Parrafo> {Proyectos[currentProyect].descripcion} </Parrafo>
 
 
-    </>);
+    </Contenedor>);
 }
 
 export default GaleriaDeProyectos;

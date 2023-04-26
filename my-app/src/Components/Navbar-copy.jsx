@@ -1,69 +1,33 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faInfo } from "@fortawesome/free-solid-svg-icons";
-import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
-import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
-import { faDownload } from "@fortawesome/free-solid-svg-icons";
-
 
 
 
 const StyledNav = styled.nav`
-  
-  z-index: 100;
-  position: ${({ isFixed }) => (isFixed ? "fixed" : "absolute")};
-  top: ${({ isFixed }) => (isFixed ? "0" : "auto")};
-  width: 100%;
-  background: rgb(114,66,66);
-  background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
-  box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
-  border-top-right-radius:5px;
-  border-top-left-radius:5px;
-  height: 10vh;
-  justify-content: space-around;
-  font-size: 1.5rem;
-  @media (min-width:20.00em) {        
-    height: 150px;
-  }
-  @media (min-width:37.500em) {
-    margin-top: 0px;
-    
-    
-  }
-  @media(min-width:44rem) {
-    display: none;
-         
-  }
-  @media(min-width:61.93em) {
-  
-  }  
-`;
-
-const StyledNavGrande = styled.nav`
-  display: none; 
   margin-top: 10px;
   z-index: 100;
   position: ${({ isFixed }) => (isFixed ? "fixed" : "absolute")};
   top: ${({ isFixed }) => (isFixed ? "0" : "auto")};
   width: 100%;
+  /* display: flex;
+  flex-wrap: nowrap; */
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
   border-top-right-radius:5px;
   border-top-left-radius:5px;
+  visibility: ${({ isFixed }) => (isFixed ? "hidden" : "visible")};
+  
   justify-content: space-around;
   @media (min-width:20.00em) {        
     height: 150px;
-    
   }
   @media (min-width:37.500em) {
     margin-top: 0px;
     height: 10vh;
+    visibility: visible;
   }
-  @media(min-width:44rem) {
-    display: block;
+  @media(min-width:43rem) {
     
          
   }
@@ -90,7 +54,6 @@ const StyledListItem = styled.li`
     color: rgba(189,189,189,1);
     text-transform: uppercase;
     text-decoration: none;
-    
   }
 `;
 
@@ -157,7 +120,7 @@ const Navbar2 = () => {
     <>
 
 
-      <StyledNavGrande isFixed={isNavFixed}>
+      <StyledNav isFixed={isNavFixed}>
         <StyledList>
 
           <StyledListItem>
@@ -178,36 +141,6 @@ const Navbar2 = () => {
 
           <StyledListItem>
             <StyledLink href="#CV">CV</StyledLink>
-          </StyledListItem>
-
-        </StyledList>
-      </StyledNavGrande>
-
-
-
-
-      <StyledNav isFixed={isNavFixed}>
-        <StyledList>
-
-          <StyledListItem>
-            <StyledLink href="#Home"><FontAwesomeIcon icon={faHouse} />
-            </StyledLink>
-          </StyledListItem>
-
-          <StyledListItem>
-            <StyledLink href="#About"><FontAwesomeIcon icon={faInfo} /> </StyledLink>
-          </StyledListItem>
-
-          <StyledListItem>
-            <StyledLink href="#Projects"><FontAwesomeIcon icon={faPersonDigging} /> </StyledLink>
-          </StyledListItem>
-
-          <StyledListItem>
-            <StyledLink href="#Hobbies"><FontAwesomeIcon icon={faFaceSmileBeam} /> </StyledLink>
-          </StyledListItem>
-
-          <StyledListItem>
-            <StyledLink href="#CV"><FontAwesomeIcon icon={faDownload} /></StyledLink>
           </StyledListItem>
 
         </StyledList>

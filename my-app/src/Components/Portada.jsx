@@ -14,19 +14,19 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
    @media (min-width:20.00em) {        
-    background-color:red ;
+    
   }
   @media (min-width:37.500em) {
-    background-color:yellow ;
+    
   }
   @media(min-width:43rem) {
-    background-color:green ;
+    
     flex-direction: row;
     justify-content:space-around;
               
   }
   @media(min-width:61.93em) {
-  background-color:blue ;
+  
   }  
 `;
 
@@ -67,10 +67,9 @@ const StyledP = styled.div`
 `;
 
 const Imagen = styled.img`
-  height: 450px;
+  height: 400px;
   border-radius:10%;
   cursor: pointer;
-
   &:hover ~ div ${StyledP}:after {
     width: 60%;
     background-color: #4e6464;
@@ -80,26 +79,53 @@ const Imagen = styled.img`
     box-shadow: 0px 0px 16px 0px rgba(163,163,163,1);
   }
 
+  @media (min-width:20.00em) {        
+  
+  }
+  @media (min-width:37.500em) {
+  }
+  @media(min-width:43rem) {
+    
+              
+  }
+  @media(min-width:61.93em) {
+              
+  } 
  
 `;
 
 const Container2 = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   justify-content: center;
   text-align: center;
-
+  margin-top: 30px;
+  
+  @media (min-width:20.00em) {        
+  
+  }
+  @media (min-width:37.500em) {
+    margin: 30px auto;
+  }
+  @media(min-width:43rem) {
+         
+         margin-left: 30px;
+  }
+  @media(min-width:61.93em) {
+              
+  } 
 `;
 
 
 
 const Button = styled.a`
-  display: block;
+
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
-  border: 0;
   text-transform: uppercase;
   letter-spacing: .32em;
+  line-height: 25px;
+  margin: auto;
   cursor: pointer;
   font-weight: bold;
   border-radius: 0;
@@ -107,10 +133,11 @@ const Button = styled.a`
   padding: 1.1rem 2.1rem;
   transition: box-shadow 1s ease-in-out;
   color: rgba(189,189,189,1);
-  position: relative;
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
+   max-width: 250px; 
+
   :hover{
     color: black;
     

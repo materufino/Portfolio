@@ -15,7 +15,7 @@ const Contenedor = styled.div`
     align-items:center;
     width: 80%;
     height: 90vh;
-    margin: 100px auto;
+    margin: 200px auto;
 
     
 `
@@ -46,19 +46,19 @@ const ContenedorImagenes = styled.div`
     gap: 10px;
     justify-content: space-around;
      @media (min-width:20.00em) {        
-    background-color:red ;
+    
   }
   @media (min-width:37.500em) {
-    background-color:yellow ;
+    
     flex-direction: row;
   }
   @media(min-width:43rem) {
-    background-color:green ;
+    
     flex-direction: row;
               
   }
   @media(min-width:61.93em) {
-  background-color:blue ;
+  
   }  
     
     `
@@ -91,18 +91,18 @@ const TarjetaImg = styled.div`
         align-items: center;
     }
      @media (min-width:20.00em) {        
-    background-color:red ;
+    
   }
   @media (min-width:37.500em) {
-    background-color:yellow ;
+    
   }
   @media(min-width:43rem) {
-    background-color:green ;
+    
     flex-direction: row;
               
   }
   @media(min-width:61.93em) {
-  background-color:blue ;
+  
   }  
 `
 
