@@ -1,16 +1,17 @@
 import styled from "styled-components";
-import GaleriaDeProyectos from "./Pequeños/GaleriaDeProyectos"
-import mancha from "../Assets/mancha.png"
+import GaleriaDeProyectos from "./GaleriaDeProyectos"
+
 
 
 const Container = styled.div`
     display: flex;
-   flex-direction: column;
+    flex-direction: column;
     width: 80%;
     margin: 10px auto;
     align-items: center;
     justify-content: center;
-
+    margin-bottom: 300px;
+    
 `
 const Divisor = styled.div`
     width:45px;
@@ -25,6 +26,7 @@ const StyledH3 = styled.h3`
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 10px;
     
+    
 `
 const Parrafo = styled.p`
     margin-top:50px;
@@ -35,15 +37,7 @@ const Parrafo = styled.p`
     line-height: 30px;
 
 `
-const Mancha = styled.div`
-    background-image: url(${mancha});
-    width: 500px;
-    height: 100px;
-    margin-left: -200px;
-    position: absolute;
-    transform: rotate(90deg);
-    z-index: -1;
-`
+
 
 const Parrafo2 = styled.p`
     margin-top:50px;
@@ -61,14 +55,13 @@ const Parrafo2 = styled.p`
 
 `
 
+
 const Projects = () => {
 
 
 
 
-    return (<>
-
-        <Mancha />
+    return (<div data-aos="fade-up">
 
 
         <Container>
@@ -81,10 +74,12 @@ const Projects = () => {
             <Parrafo2>Ver todos</Parrafo2>
             <GaleriaDeProyectos />
 
+
+
         </Container>
 
 
-    </>)
+    </div>)
 }
 
 export default Projects

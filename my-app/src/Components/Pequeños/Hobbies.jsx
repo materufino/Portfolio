@@ -1,7 +1,8 @@
 import styled from "styled-components"
-import cocktail from "../Assets/cocktail.png"
-import front from "../Assets/frontlever.png"
-import mancha from "../Assets/mancha3.png"
+import cocktail from "../../Assets/cocktail.png"
+import front from "../../Assets/frontlever.png"
+
+
 const StyledH3 = styled.h3`
     font-size:40px;
     font-family: 'Source Code Pro', monospace;
@@ -9,14 +10,12 @@ const StyledH3 = styled.h3`
     margin-top: 30px;
 `
 const Contenedor = styled.div`
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
     width: 80%;
-    height: 90vh;
-    margin: 200px auto;
-
     
 `
 
@@ -40,11 +39,13 @@ const Parrafo = styled.p`
 
 const ContenedorImagenes = styled.div`
     margin-top: 30px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     gap: 10px;
     justify-content: space-around;
+    
      @media (min-width:20.00em) {        
     
   }
@@ -64,13 +65,12 @@ const ContenedorImagenes = styled.div`
     `
 
 const TarjetaImg = styled.div`
-    box-shadow: 0px 0px 12px 2px rgba(189,189,189,0.8);
+   
     width: 100%;
     padding: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
-    border-radius: 5px;
     h4{
         font-family: 'Source Code Pro', monospace;
         margin-top: 20px;
@@ -94,7 +94,7 @@ const TarjetaImg = styled.div`
     
   }
   @media (min-width:37.500em) {
-    
+    box-shadow: 0px 0px 12px 2px rgba(189,189,189,0.8);
   }
   @media(min-width:43rem) {
     
@@ -107,7 +107,6 @@ const TarjetaImg = styled.div`
 `
 
 const Parrafo2 = styled.p`
-    margin-top:50px;
     margin-bottom:10px;
     font-family: 'Montserrat', sans-serif;
     font-size:20px;
@@ -124,7 +123,7 @@ const Parrafo2 = styled.p`
 
 const Hobbies = () => {
 
-    return (<>
+    return (<div data-aos="fade-up">
 
         <Contenedor>
             <div style={{ alignItems: "center", flexDirection: "column", display: "flex" }}>
@@ -149,7 +148,7 @@ const Hobbies = () => {
 
 
 
-    </>)
+    </div>)
 }
 
 export default Hobbies

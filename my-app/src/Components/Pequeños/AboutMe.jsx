@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import fondo from '../Assets/fondo.png'
+import React from 'react';
 
 const Contenedor = styled.div`
     display:flex;
@@ -8,12 +8,11 @@ const Contenedor = styled.div`
     align-items:center;
     width: 100%;
     height: 90vh;
-    margin: 100px auto;
+    margin: 300px auto;
+   
 `
-
-
 const StyledH3 = styled.h3`
-    font-size:40px;
+    font-size: 40px;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 10px;
     margin-top: 30px;
@@ -38,10 +37,11 @@ const Divisor = styled.div`
 `
 
 
+
 const AboutMe = () => {
 
 
-    return (<>
+    return (<div data-aos="fade-up">
         <Contenedor>
             <StyledH3>About</StyledH3>
             <Divisor />
@@ -49,9 +49,10 @@ const AboutMe = () => {
                 En la web podrás encontrar mi Curriculum Vitae, acceder a mis proyectos y saber un poco más sobre mi. Te invito a que explores mi trabajo y veas cómo puedo ayudarte en tu próximo proyecto.<br />
                 ¡Gracias por visitar mi sitio y espero poder trabajar juntos pronto!
             </Parrafo>
+
         </Contenedor>
 
-    </>)
+    </div>)
 }
 
 export default AboutMe

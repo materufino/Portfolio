@@ -11,6 +11,7 @@ const StyledH4 = styled.h4`
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 5px;
     text-align: center;
+    min-height: 50px;
     
 `
 
@@ -22,16 +23,15 @@ const Imagen = styled.img`
         width:320px ;
   }
   @media (min-width:37.500em) {
-    
     width: 590px;
   }
   @media(min-width:48rem) {
     width: auto;
-    height: 420px;
+    height: 350px;
               
   }
   @media(min-width:61.93em) {
-              
+      height: 420px;
   } 
     
 `
@@ -127,36 +127,36 @@ const Contenedor = styled.div`
 
 const GaleriaDeProyectos = () => {
 
-    const [currentProyect, setCurrentProyect] = useState(0);
+  const [currentProyect, setCurrentProyect] = useState(0);
 
-    const handleNext = () => {
-        const nextIndex = currentProyect === Proyectos.length - 1 ? 0 : currentProyect + 1;
-        setCurrentProyect(nextIndex);
-    };
-    const handlePrevious = () => {
-        const previousIndex = currentProyect === 0 ? Proyectos.length - 1 : currentProyect - 1;
-        setCurrentProyect(previousIndex);
-    };
-
-
-
-    return (<Contenedor>
+  const handleNext = () => {
+    const nextIndex = currentProyect === Proyectos.length - 1 ? 0 : currentProyect + 1;
+    setCurrentProyect(nextIndex);
+  };
+  const handlePrevious = () => {
+    const previousIndex = currentProyect === 0 ? Proyectos.length - 1 : currentProyect - 1;
+    setCurrentProyect(previousIndex);
+  };
 
 
-        <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
-        <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" /></a>
 
-        <ContenedorBotones>
-
-            <BotonSliderAtras onClick={handlePrevious} > <Icono icon={faArrowLeft} />  </BotonSliderAtras>
-            <BotonSliderAdelante onClick={handleNext} > <Icono icon={faArrowRight} /> </BotonSliderAdelante>
-
-        </ContenedorBotones>
-
-        <Parrafo> {Proyectos[currentProyect].descripcion} </Parrafo>
+  return (<Contenedor>
 
 
-    </Contenedor>);
+    <StyledH4>{Proyectos[currentProyect].titulo}</StyledH4>
+    <a href={Proyectos[currentProyect].url} target="_blank"><Imagen src={Proyectos[currentProyect].imagen} alt="Captura sitio web Ánforas de Atenea" loading='lazy' /></a>
+
+    <ContenedorBotones>
+
+      <BotonSliderAtras onClick={handlePrevious} > <Icono icon={faArrowLeft} />  </BotonSliderAtras>
+      <BotonSliderAdelante onClick={handleNext} > <Icono icon={faArrowRight} /> </BotonSliderAdelante>
+
+    </ContenedorBotones>
+
+    <Parrafo> {Proyectos[currentProyect].descripcion} </Parrafo>
+
+
+  </Contenedor>);
 }
 
 export default GaleriaDeProyectos;

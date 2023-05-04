@@ -6,34 +6,31 @@ import { faInfo } from "@fortawesome/free-solid-svg-icons";
 import { faPersonDigging } from "@fortawesome/free-solid-svg-icons";
 import { faFaceSmileBeam } from "@fortawesome/free-solid-svg-icons";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-
-
+import cv from "../../Assets/MateoRufinoCv.pdf"
+import { useNavigate } from "react-router-dom";
 
 
 const StyledNav = styled.nav`
-  
-  z-index: 100;
-  position: ${({ isFixed }) => (isFixed ? "fixed" : "absolute")};
-  top: ${({ isFixed }) => (isFixed ? "0" : "auto")};
   width: 100%;
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
   border-top-right-radius:5px;
   border-top-left-radius:5px;
-  height: 10vh;
   justify-content: space-around;
   font-size: 1.5rem;
-  @media (min-width:20.00em) {        
-    height: 150px;
+  height: 10vh;
+  
+  @media (min-width:20.00em) {
+    
   }
   @media (min-width:37.500em) {
-    margin-top: 0px;
+    
     
     
   }
   @media(min-width:44rem) {
-    display: none;
+    
          
   }
   @media(min-width:61.93em) {
@@ -54,7 +51,10 @@ const StyledNavGrande = styled.nav`
   border-top-right-radius:5px;
   border-top-left-radius:5px;
   justify-content: space-around;
-  @media (min-width:20.00em) {        
+
+
+
+  @media (min-width:20.00em) {     
     height: 150px;
     
   }
@@ -135,6 +135,12 @@ const StyledLink = styled.a`
 
 const Navbar2 = () => {
   const [isNavFixed, setIsNavFixed] = useState(false);
+  const navigate = useNavigate();
+
+  const cambiaRuta = (path) => {
+
+    navigate(path);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,23 +167,23 @@ const Navbar2 = () => {
         <StyledList>
 
           <StyledListItem>
-            <StyledLink href="#Home">Home</StyledLink>
+            <StyledLink href="/#portada">Home</StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#About">About</StyledLink>
+            <StyledLink href="/#about">About</StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#Projects">Projects</StyledLink>
+            <StyledLink onClick={() => cambiaRuta('/Projects')}>Projects</StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#Hobbies">Hobbies</StyledLink>
+            <StyledLink onClick={() => cambiaRuta('/Hobbies')}>Hobbies</StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#CV">CV</StyledLink>
+            <StyledLink href={cv} download>CV</StyledLink>
           </StyledListItem>
 
         </StyledList>
@@ -190,24 +196,24 @@ const Navbar2 = () => {
         <StyledList>
 
           <StyledListItem>
-            <StyledLink href="#Home"><FontAwesomeIcon icon={faHouse} />
+            <StyledLink onClick={() => cambiaRuta('/')}><FontAwesomeIcon icon={faHouse} />
             </StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#About"><FontAwesomeIcon icon={faInfo} /> </StyledLink>
+            <StyledLink onClick={() => cambiaRuta('/About')}><FontAwesomeIcon icon={faInfo} /> </StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#Projects"><FontAwesomeIcon icon={faPersonDigging} /> </StyledLink>
+            <StyledLink onClick={() => cambiaRuta('/Projects')}><FontAwesomeIcon icon={faPersonDigging} /> </StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#Hobbies"><FontAwesomeIcon icon={faFaceSmileBeam} /> </StyledLink>
+            <StyledLink onClick={() => cambiaRuta('/Hobbies')}><FontAwesomeIcon icon={faFaceSmileBeam} /> </StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink href="#CV"><FontAwesomeIcon icon={faDownload} /></StyledLink>
+            <StyledLink href={cv} download><FontAwesomeIcon icon={faDownload} /></StyledLink>
           </StyledListItem>
 
         </StyledList>
