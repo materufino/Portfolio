@@ -1,5 +1,6 @@
 import anforas from "../../Assets/anforas.png";
 import guardianes from "../../Assets/guardianes.png";
+
 const Proyectos = [{
 
     titulo: "Ánforas de Atenea",

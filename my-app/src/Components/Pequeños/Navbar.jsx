@@ -167,7 +167,7 @@ const Navbar2 = () => {
         <StyledList>
 
           <StyledListItem>
-            <StyledLink href="/#portada">Home</StyledLink>
+            <StyledLink href="/#">Home</StyledLink>
           </StyledListItem>
 
           <StyledListItem>
@@ -196,12 +196,12 @@ const Navbar2 = () => {
         <StyledList>
 
           <StyledListItem>
-            <StyledLink onClick={() => cambiaRuta('/')}><FontAwesomeIcon icon={faHouse} />
+            <StyledLink href="/#"><FontAwesomeIcon icon={faHouse} />
             </StyledLink>
           </StyledListItem>
 
           <StyledListItem>
-            <StyledLink onClick={() => cambiaRuta('/About')}><FontAwesomeIcon icon={faInfo} /> </StyledLink>
+            <StyledLink href="/#about"><FontAwesomeIcon icon={faInfo} /> </StyledLink>
           </StyledListItem>
 
           <StyledListItem>

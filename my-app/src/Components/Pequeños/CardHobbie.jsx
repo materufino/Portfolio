@@ -1,46 +1,55 @@
-import styled from "styled-components";
-
+import styled from "styled-components"
+import Hobbies from "./Hobbies"
 
 const Contenedor = styled.div`
+
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    margin: 30px auto;
-    justify-content: center;
-    align-items:center;
     border-radius: 5px;
-    flex-direction: column;
-    box-shadow: 0px 12px 17px -12px rgba(191,191,191,1);
-    -webkit-box-shadow: 0px 12px 17px -12px rgba(191,191,191,1);
-    -moz-box-shadow: 0px 12px 17px -12px rgba(191,191,191,1);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 31px 12px -35px rgba(189,189,189,1);
+    -moz-box-shadow: 0px 31px 12px -35px rgba(189,189,189,1);
+    box-shadow: 0px 31px 12px -35px rgba(189,189,189,1);
+
+
+
 
   @media (min-width:20.00em) {            
   }
   @media (min-width:37.500em) {   
     justify-content: center;
-     
     -webkit-box-shadow: 0px 0px 5px 0px rgba(153,153,153,1);
     -moz-box-shadow: 0px 0px 5px 0px rgba(153,153,153,1);
     box-shadow: 0px 0px 5px 0px rgba(153,153,153,1);
+    padding: 20px;
+    width: 70%;
     
   }
   @media(min-width:48rem) {  
    
-   flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
+    min-height: 450px;
+    
    
   }
-  @media(min-width:80em) {
-    min-height: 450px;
-    width: 45%;
+   @media(min-width:61.93em) {
+    width: 42%;
+    margin: 10px;
+    min-height: 500px;
     
     
   }  
+  
 `
 const MiniContenedor = styled.figure`
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
     color:#333;
      @media(min-width:48rem) {  
       width: 100%;
@@ -50,27 +59,21 @@ const MiniContenedor = styled.figure`
 
 
 const Imagen = styled.img`
-    width: 100%;
+    width: 120px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     @media (min-width:20.00em) {            
   }
-  @media (min-width:37.500em) {   
-    margin: auto;
+  @media (min-width:37.500em) {
+   width: 150px;
     
   }
   @media(min-width:43rem) {  
-    width: 500px;
+    
       
   }
   @media(min-width:48rem) {  
-    width: 55%;
-    margin-top: 0px;
-    border-radius: 4px;
-    margin-left: 5%;
-    margin-top: -15px;
-    box-shadow: 0px 0px 34px -5px #919191;
-
+    
     
       
   }
@@ -81,31 +84,35 @@ const Imagen = styled.img`
 
 `
 const StyledH4 = styled.h4`
-    margin-top: 25px;
+    width: 50%;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 5px;
-    text-align: center;
+    text-align: left;
     min-height: 50px;
-    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+
+
   @media (min-width:20.00em) {            
   }
   @media (min-width:37.500em) {   
    
+   
   }
   @media(min-width:43rem) {  
+   
    
       
   }
   @media(min-width:48rem) {  
     width: 38%;
-    /* margin-left: 2%; */
-    align-items: center;
-    margin-top: 12%;
     
-    
-      
+    align-items: center; 
   }
   @media(min-width:80em) {
     
@@ -119,15 +126,17 @@ const Parrafo = styled.p`
     font-family: 'Montserrat', sans-serif;
     line-height: 25px;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 10px;
-    width: 90%;
+    width: 100%;
+    margin-top: 5px;
     min-height: 100px;
      @media (min-width:20.00em) {            
   }
   @media (min-width:37.500em) {
     margin: auto;
     margin-bottom: 10px;
+    margin-top: 30px;
     
     
   }
@@ -139,50 +148,40 @@ const Parrafo = styled.p`
        
   }
   @media(min-width:61.93em) {
-    
+    min-height: 250px;
     
   } 
 `
-const Parrafo2 = styled.a`
+
+const Parrafo2 = styled.p`
     font-family: 'Montserrat', sans-serif;
-    text-align: end;
-    background-color: rgba(114,66,66,1);
-    box-sizing: content-box;
-    color:#8f8e8e;
-    padding: 12px;
-    border-radius: 7px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(191,191,191,1);
-    -moz-box-shadow: 0px 0px 10px 0px rgba(191,191,191,1);
-    box-shadow: 0px 0px 10px 0px rgba(191,191,191,1);
-    :hover{
-        color: #cacaca;
-        -webkit-box-shadow: 0px 0px 10px 0px #3d3d3d;
-    -moz-box-shadow: 0px 0px 10px 0px #3d3d3d;
-    box-shadow: 0px 0px 15px 0px #3d3d3d;
-        
-    }
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: clamp(.7rem, 1vw - 2rem, 3rem);
+    
+    color: #727272;
+    border-radius: 100px;
+
+
+
 `
 
+const CardHobbie = ({ titulo, lugar, imagen, descripcion, fecha }) => {
 
-
-
-const CardProyecto = ({ titulo, url, imagen, descripcionCompleta, tecnologias }) => {
   return (<>
-
     <Contenedor>
-      <Imagen src={imagen} alt={titulo} />
-      <StyledH4>{titulo}</StyledH4>
-      <Parrafo>{descripcionCompleta} </Parrafo>
+      <MiniContenedor style={{ justifyContent: "space-around", textAlign: "center", alignItems: "center", alignContent: "center" }}>
+        <StyledH4>{titulo}</StyledH4>
+        <Imagen src={imagen} />
+      </MiniContenedor>
+      <Parrafo>{descripcion} </Parrafo>
+
       <MiniContenedor>
-        <Parrafo2 href={url}>Ir al sitio web</Parrafo2>
+        <Parrafo2>{lugar}</Parrafo2>
+        <Parrafo2>{fecha} </Parrafo2>
       </MiniContenedor>
     </Contenedor>
-
-
-
   </>)
 }
 
-export default CardProyecto;
+export default CardHobbie
