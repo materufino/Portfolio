@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import NNavbar from "./NuevosPequeños/NNavbar";
 import Elegida from "../../Assets/Elegida.png"
-import CardProyecto from "./NuevosPequeños/CardProyecto";
-import Proyectos from "../Contenido/Proyectos"
-import SliderProyectos from "./NuevosPequeños/CardProyecto";
+import SliderWebs from "./NuevosPequeños/SliderWebs";
+
 
 
 const Todo = styled.div`
@@ -102,9 +101,11 @@ box-shadow: inset 0px 100px 100px -50px rgba(0,0,0,0.5);
 const ContenedorProyectos = styled.section`
     clip-path: circle(82% at 50% 70%);
     background-color: rgb(34 32 31);
+    margin: 0 auto;
     margin-top: -190px;
-    
+    width: 100%;
     padding-bottom: 50px;
+    overflow-x: hidden;
     ${StyledH3}{
         color: rgb(75 92 123);
     }
@@ -115,8 +116,10 @@ const ContenedorProyectos = styled.section`
 `
 
 
-const ContenedorCard = styled.div`
-   
+
+const ContenedorSlider = styled.div`
+    width: 85%;
+    margin: 0 auto;
     
     
 `
@@ -154,7 +157,9 @@ const NuevaPortada = () => {
         <ContenedorProyectos>
             <StyledH3>Proyectos</StyledH3>
             <StyledParrafo>Mis proyectos realizados hasta el momento, si quieres ver más en profundidad puedes hacer clic en la imagen y serás dirigido al sitio web </StyledParrafo>
-            <SliderProyectos />
+            <ContenedorSlider>
+                <SliderWebs />
+            </ContenedorSlider>
         </ContenedorProyectos>
 
     </Todo>)

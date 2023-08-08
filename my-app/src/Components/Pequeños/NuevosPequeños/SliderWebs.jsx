@@ -4,17 +4,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Proyectos from "../../Contenido/Proyectos";
 import styled from "styled-components";
+import { useEffect } from "react";
 
 
 
 
 const Imagen = styled.img`
-   margin: 0 auto;
+    margin: 0 auto;
     width: 95%;
 `
 
 const SliderContainer = styled.div`
-    max-width: 270px;
+    min-width: 270px;
     margin: 0 auto;
     border: 2px solid #fafafa10;
     background-color: #fafafa10;
@@ -23,11 +24,11 @@ const SliderContainer = styled.div`
     border-radius: 10px;
     padding: 5px;
     min-height: 300px;
+
 `;
 
 
 const Titulo = styled.h3`
-   
     height: 50px;
     text-align: center;
     margin-top: 15px;
@@ -45,20 +46,48 @@ const Descripcion = styled.h3`
 `
 
 
-const SliderProyectos = () => {
+const SliderWebs = () => {
+
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "none", background: "red" }}
+                onClick={onClick}
+            />
+        );
+    }
+
+    function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+            <div
+                className={className}
+                style={{ ...style, display: "none", background: "green" }}
+                onClick={onClick}
+            />
+        );
+    }
+
+
+
+
     const settings = {
         dots: true,
         infinite: false,
         speed: 500,
-        slidesToShow: 4,
-        slidesToScroll: 4,
+        slidesToShow: 3,
+        slidesToScroll: 3,
         initialSlide: 0,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: true
                 }
@@ -68,7 +97,7 @@ const SliderProyectos = () => {
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    initialSlide: 2
+                    initialSlide: 1
                 }
             },
             {
@@ -81,7 +110,15 @@ const SliderProyectos = () => {
         ]
     };
 
+    useEffect(() => {
+        document.body.classList.add('bodynoscroll');
+        return () => {
+            document.body.classList.remove('bodynoscroll');
+        };
+    }, []);
+
     return (<>
+
         <SliderContainer>
             <Slider {...settings}>
                 {Proyectos.map(item => (
@@ -100,4 +137,4 @@ const SliderProyectos = () => {
     </>)
 }
 
-export default SliderProyectos;
+export default SliderWebs;

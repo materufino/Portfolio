@@ -22,6 +22,14 @@ body {
   background: -webkit-linear-gradient(180deg, hsla(0, 0%, 13%, 1) 0%, hsla(0, 0%, 20%, 1) 100%);
   filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#202020", endColorstr="#343434", GradientType=1); */
 
+  .bodynoscroll {
+    overflow: auto;
+    /* Permite el desplazamiento cuando sea necesario */
+    scrollbar-width: none;
+    /* Para navegadores que soportan 'scrollbar-width' */
+    -ms-overflow-style: none;
+    /* Para navegadores de Microsoft Edge */
+  }
 
 
 
