@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import cocktail from "../../Assets/cocktail.png"
 import front from "../../Assets/frontlever.png"
+import { useNavigate } from "react-router-dom"
 
 
 const StyledH3 = styled.h3`
@@ -122,6 +123,12 @@ const Parrafo2 = styled.p`
 `
 
 const Hobbies = () => {
+    const navigate = useNavigate();
+
+    const cambiaRuta = (path) => {
+
+        navigate(path);
+    }
 
     return (<div data-aos="fade-up">
 
@@ -143,7 +150,7 @@ const Hobbies = () => {
                     <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginTop: "20px", marginBottom: "20px" }}><img src={front} alt="" /></div>
                 </TarjetaImg>
             </ContenedorImagenes>
-            <Parrafo2>Ver todo</Parrafo2>
+            <Parrafo2 onClick={() => cambiaRuta('/Hobbies')} >Ver todo</Parrafo2>
         </Contenedor>
 
 

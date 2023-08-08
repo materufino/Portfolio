@@ -6,7 +6,8 @@ import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const StyledH4 = styled.h4`
-    margin-bottom: 35px;
+   
+    margin-top: 30px;
     font-size:20px;
     font-family: 'Source Code Pro', monospace;
     letter-spacing: 5px;
@@ -18,7 +19,7 @@ const StyledH4 = styled.h4`
 const Imagen = styled.img`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-    
+    transition: all 1s ease-in-out;
     @media (min-width:20.00em) {        
         width:320px ;
   }
@@ -52,7 +53,7 @@ const Icono = styled(FontAwesomeIcon)`
   
 `;
 const BotonSliderAtras = styled.button`
-  width: 20%;
+  width: 100px;
   color: rgba(189,189,189,1);
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
@@ -77,7 +78,7 @@ const BotonSliderAdelante = styled.button`
   color: rgba(189,189,189,1);
   font-size: 1.2rem;
   border-radius: 5px;
-  width: 20%;
+  width: 100px;
   background: rgb(114,66,66);
   background: radial-gradient(circle, rgba(114,66,66,1) 0%, rgba(150,79,79,1) 80%);
   box-shadow: 0px 0px 34px -5px rgba(189,189,189,1);
@@ -105,13 +106,15 @@ const ContenedorBotones = styled.div`
     margin-top: 15px;
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 300px;
+
 `
 const Contenedor = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    transition: all 1s ease-in-out;
      @media (min-width:20.00em) {        
         min-height: 600px;
   }

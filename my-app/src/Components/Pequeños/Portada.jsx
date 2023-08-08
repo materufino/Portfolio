@@ -11,6 +11,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 90vh;
+  /* height: calc(90vh - ${window.outerHeight - window.innerHeight}px); */
   margin: 0 auto;
  
 
@@ -22,6 +23,7 @@ const Container = styled.div`
     padding-right: 10px;
   }
   @media(min-width:43rem) {  
+    height: 90vh;
    
        
   }
@@ -234,10 +236,15 @@ const Mancha2 = styled.div`
     z-index: -1;
 `
 
+
+
 const Image = () => {
+
+
+
   return (<>
     <Container>
-      {/*  <Mancha /> */}
+      <Mancha />
       <Imagen src={mateo} />
       <Container2>
         <Title>{("Mateo Rufino").toUpperCase()}</Title>

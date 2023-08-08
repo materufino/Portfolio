@@ -20,8 +20,7 @@ const StyledNav = styled.nav`
   justify-content: space-around;
   font-size: 1.5rem;
   height: 10vh;
-  
-  @media (min-width:20.00em) {
+    @media (min-width:20.00em) {
     
   }
   @media (min-width:37.500em) {
@@ -51,7 +50,6 @@ const StyledNavGrande = styled.nav`
   border-top-right-radius:5px;
   border-top-left-radius:5px;
   justify-content: space-around;
-
 
 
   @media (min-width:20.00em) {     

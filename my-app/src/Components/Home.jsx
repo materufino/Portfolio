@@ -7,6 +7,7 @@ import Projects from "./Pequeños/Projects"
 import Social from "./Pequeños/Social"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import NuevaPortada from "./Pequeños/NuevaPortada"
 
 
 
@@ -29,8 +30,10 @@ const Home = () => {
 
     return (<>
 
+        <NuevaPortada />
 
-        <div id="portada" ref={productosRef}>
+
+        {/*  <div id="portada" ref={productosRef}>
             <Portada />
         </div>
         <Navbar />
@@ -41,7 +44,15 @@ const Home = () => {
 
         <Hobbies id="hobbies" />
 
-        <Social />
+        <Social /> */}
+
+
+
+
+
+
+
+
     </>)
 }
 

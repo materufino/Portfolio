@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import GaleriaDeProyectos from "./GaleriaDeProyectos"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -39,7 +40,7 @@ const Parrafo = styled.p`
 `
 
 
-const Parrafo2 = styled.p`
+const Parrafo2 = styled.a`
     margin-top:50px;
     margin-bottom:50px;
     font-family: 'Montserrat', sans-serif;
@@ -58,6 +59,12 @@ const Parrafo2 = styled.p`
 
 const Projects = () => {
 
+    const navigate = useNavigate();
+
+    const cambiaRuta = (path) => {
+
+        navigate(path);
+    }
 
 
 
@@ -71,8 +78,8 @@ const Projects = () => {
             <StyledH3>Projects</StyledH3>
             <Divisor></Divisor>
             <Parrafo>Mis proyectos realizados hasta el momento, si quieres ver más en profundidad puedes hacer clic en la imagen y serás dirigido al sitio web </Parrafo>
-            <Parrafo2>Ver todos</Parrafo2>
             <GaleriaDeProyectos />
+            <Parrafo2 onClick={() => cambiaRuta('/Projects')}>Ver todos</Parrafo2>
 
 
 
