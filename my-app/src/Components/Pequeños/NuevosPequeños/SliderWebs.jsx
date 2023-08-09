@@ -95,8 +95,8 @@ const SliderWebs = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                     initialSlide: 1
                 }
             },
@@ -126,7 +126,7 @@ const SliderWebs = () => {
 
                         <Titulo>{item.titulo}</Titulo>
                         <a href={item.url} target="on_blank">
-                            <Imagen src={item.imagen} alt={item.titulo} />
+                            <Imagen src={item.imagen} alt={item.titulo} loading="lazy" />
                         </a>
                         <Descripcion>{item.descripcion}</Descripcion>
                     </>

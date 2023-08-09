@@ -2,7 +2,7 @@ import styled from "styled-components";
 import NNavbar from "./NuevosPequeños/NNavbar";
 import Elegida from "../../Assets/Elegida.png"
 import SliderWebs from "./NuevosPequeños/SliderWebs";
-
+import cv from "../../Assets/MateoRufinoCv.pdf"
 
 
 const Todo = styled.div`
@@ -123,6 +123,169 @@ const ContenedorSlider = styled.div`
     
     
 `
+const ContenedorCv = styled.section`
+    width: 100%;
+   background-color: rgb(34 32 31);
+   box-shadow: inset 0px -50px 20px -45px rgba(75,92,123,0.8);
+   justify-content: center;
+   display: flex;
+   
+`
+
+
+
+
+const Button = styled.button`
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+  color: #0f1923;
+  cursor: pointer;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.15s ease;
+  outline: none;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7d8082;
+    transition: all 0.15s ease;
+  }
+
+  &:before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+
+  &:active {
+    &:before,
+    &:after {
+      right: 3px;
+      left: 3px;
+    }
+    &:before {
+      top: 3px;
+    }
+    &:after {
+      bottom: 3px;
+    }
+  }
+
+  &:hover {
+    color: #0f1923;
+
+    .button_sl {
+      width: calc(100% + 15px);
+    }
+
+    .button_lg::after {
+      background-color: #fff;
+    }
+  }
+`;
+
+const LargeButton = styled.span`
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #0f1923;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 0px 1px transparent;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all 0.2s ease;
+  }
+`;
+
+const SlantedStripe = styled.span`
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -8px;
+  width: 0;
+  background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  transform: skew(-15deg);
+  transition: all 0.2s ease;
+`;
+
+const ButtonText = styled.span`
+  position: relative;
+`;
+
+const ContenedorBoton = styled.div`
+    margin: 0 auto;
+    padding: 60px;
+`
+const StyledLink = styled.a`
+  color: white;
+  text-decoration: none;
+ 
+`;
+
+const Proximamente = styled.p`
+    /* font-size:20px;
+    margin-top: 30px;
+    text-align: center; */
+    position: absolute;
+     font-family: 'IBM Plex Sans',sans-serif;
+     letter-spacing: 2px;
+     line-height: 20px;
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 0 0 20px #15f15e;
+  text-transform: uppercase;
+
+  &after:{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    z-index: -1;
+  }
+
+`
 
 const NuevaPortada = () => {
 
@@ -135,7 +298,6 @@ const NuevaPortada = () => {
         <Contenedor>
 
             <ContenedorImagen>
-
                 <Imagen src={Elegida} alt="" />
             </ContenedorImagen>
 
@@ -160,7 +322,20 @@ const NuevaPortada = () => {
             <ContenedorSlider>
                 <SliderWebs />
             </ContenedorSlider>
+            <Proximamente data-text="Proximamente proyectos de ciberseguridad">Proximamente proyectos de ciberseguridad</Proximamente>
+
         </ContenedorProyectos>
+
+        <ContenedorCv>
+            <ContenedorBoton>
+                <Button className="button">
+                    <LargeButton className="button_lg">
+                        <SlantedStripe className="button_sl" />
+                        <StyledLink href={cv} download><ButtonText className="button_text">Descargar mi Cv</ButtonText></StyledLink>
+                    </LargeButton>
+                </Button>
+            </ContenedorBoton>
+        </ContenedorCv>
 
     </Todo>)
 }
