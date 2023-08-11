@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import '../../../Assets/fonts.css'
+
 const Contenedor = styled.nav`
-    
     margin-top: 10px;
     width: 95%;
+    max-width: 600px;
     height: 15vh;
+    max-height: 80px;
     position: fixed;
     border: 2px solid #fafafa10;
     background-color: #fafafa10;
@@ -24,7 +26,7 @@ const StyledLi = styled.li`
     width: 25%;
     text-align: center;
     color: #f7f7f7;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'IBM Plex Sans',sans-serif;
 `
 
@@ -32,12 +34,12 @@ const StyledLi = styled.li`
 const NNavbar = () => {
 
     return (<>
-        <Contenedor className="CardContainer">
+        <Contenedor>
             <StyledUl>
                 <StyledLi>Inicio</StyledLi>
                 <StyledLi>Sobre Mi</StyledLi>
                 <StyledLi>Proyectos</StyledLi>
-                <StyledLi>Hobbies</StyledLi>
+                <StyledLi>Formación</StyledLi>
             </StyledUl>
         </Contenedor>
 
