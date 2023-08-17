@@ -441,6 +441,7 @@ const ContenedorElementos = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 10px;
+  padding-bottom: 150px;
 `;
 
 const Elemento = styled.article`
@@ -600,9 +601,9 @@ const NuevaPortada = () => {
 
         <ContenedorS>
           <StyledList>
-            <StyledListItem href="https://www.linkedin.com/in/mateo-rufino/"><Icono2 icon={faLinkedin} /></StyledListItem>
-            <StyledListItem href="https://github.com/materufino?tab=repositories"><Icono2 icon={faGithub} /></StyledListItem>
-            <StyledListItem href="mailto:rufinomateo99@gmail.com"><Icono2 icon={faEnvelope} /></StyledListItem>
+            <a href="https://www.linkedin.com/in/mateo-rufino/" target="new_blank"><StyledListItem><Icono2 icon={faLinkedin} /></StyledListItem></a>
+            <a href="https://github.com/materufino?tab=repositories" target="new_blank"><StyledListItem><Icono2 icon={faGithub} /></StyledListItem></a>
+            <a href="mailto:rufinomateo99@gmail.com" target="new_blank"><StyledListItem><Icono2 icon={faEnvelope} /></StyledListItem></a>
           </StyledList>
         </ContenedorS>
 
