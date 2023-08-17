@@ -43,6 +43,7 @@ const Descripcion = styled.h3`
     text-align: center;
     width: 95%;
     margin-top: 20px;
+    color: white;
 `
 
 
